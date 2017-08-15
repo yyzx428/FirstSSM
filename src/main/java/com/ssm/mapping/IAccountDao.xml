@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ssm.dao.IAccountDao">
+	<resultMap type="com.ssm.model.Account" id="AccountList">
+		<id column="id" property="userName"/>
+		<result column="passWord" property="passWord"/>
+	</resultMap>
+	
+	<select id="findAccounts" resultMap="AccountList">
+		select * from account
+	</select>
+</mapper>
