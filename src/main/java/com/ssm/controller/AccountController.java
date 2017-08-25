@@ -24,6 +24,6 @@ public class AccountController {
 	@RequestMapping("/Index")
 	public Object Index(Model model) {
 		model.addAttribute("accounts", service.findAccounts());
-		return "Account\\Index";
+		return "Account/Index";
 	}
 }
